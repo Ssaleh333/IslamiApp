@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Islami App</string>
+    <string name="radio">الراديو</string>
+    <string name="tasbeh">التسبيح</string>
+    <string name="hadeth">الأحاديث</string>
+    <string name="quran">القرأن</string>
+    <array name="azkarList">
+        <item>سبحان الله</item>
+        <item>لا اله الا الله</item>
+        <item>الحمدلله</item>
+        <item>الله اكبر</item>
+    </array>
+</resources>

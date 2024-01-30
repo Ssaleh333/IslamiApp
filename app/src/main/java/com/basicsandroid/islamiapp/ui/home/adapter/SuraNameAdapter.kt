@@ -7,6 +7,7 @@ import com.basicsandroid.islamiapp.databinding.ItemSuraTitleBinding
 import com.basicsandroid.islamiapp.ui.home.model.suraNameIndex
 
 class SuraNameAdapter(var suraNameList :List<suraNameIndex>) :RecyclerView.Adapter<SuraNameAdapter.myViewHolder>() {
+    var onItemClickListener:OnSuraItemClickListener?=null
     class myViewHolder(var itemBinding:ItemSuraTitleBinding):RecyclerView.ViewHolder(itemBinding.root){
          fun bind(item:suraNameIndex){
              itemBinding.suraName.text="${item.name}"
@@ -25,5 +26,11 @@ class SuraNameAdapter(var suraNameList :List<suraNameIndex>) :RecyclerView.Adapt
     override fun onBindViewHolder(holder: myViewHolder, position: Int) {
        val item= suraNameList?.get(position) ?: return
         holder.bind(item)
+        holder.itemBinding.root.setOnClickListener{
+            onItemClickListener?.onSuraClick(suraNameIndex=item,position)
+        }
+    }
+    interface OnSuraItemClickListener{
+        fun onSuraClick(suraNameIndex:suraNameIndex,position: Int)
     }
 }

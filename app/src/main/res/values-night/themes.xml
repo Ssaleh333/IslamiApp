@@ -3,5 +3,8 @@
     <style name="Base.Theme.IslamiApp" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="android:statusBarColor">#141A2E</item>
+
     </style>
+
 </resources>

@@ -4,4 +4,15 @@
     <color name="white">#FFFFFFFF</color>
     <color name="primaryColor">#B7935F</color>
     <color name="color_transparent">#00000000</color>
+    <color name="islami_color">#242424</color>
+    <color name="bac_nomoftasbeha">#CCAA78</color>
+    <color name="box_oftasbeha">#B7935F</color>
+    <color name="count_tasbeha">#242424</color>
+    <color name="select_nav">#242424</color>
+    <color name="background_nav">#B7935F</color>
+    <color name="tv_suracolor">#242424</color>
+    <color name="item_verse">#242424</color>
+    <color name="card_sura">#BAFFFFFF</color>
+
+
 </resources>

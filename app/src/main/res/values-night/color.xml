@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="islami_color">#F8F8F8</color>
+    <color name="bac_nomoftasbeha">#141A2E</color>
+    <color name="primaryColor">#FACC1D</color>
+    <color name="box_oftasbeha">#FACC1D</color>
+    <color name="count_tasbeha">#F8F8F8</color>
+    <color name="select_nav">#FACC1D</color>
+    <color name="background_nav">#141A2E</color>
+    <color name="tv_suracolor">#F8F8F8</color>
+    <color name="item_verse">#FACC1D</color>
+    <color name="card_sura">#BF141A2E</color>
+</resources>

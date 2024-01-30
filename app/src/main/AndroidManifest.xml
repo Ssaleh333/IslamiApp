@@ -13,14 +13,24 @@
         android:theme="@style/Theme.IslamiApp"
         tools:targetApi="31">
         <activity
-            android:name=".ui.home.MainActivity"
-            android:exported="true">
+            android:name=".activity_hadeth_details"
+            android:exported="false" />
+        <activity
+            android:name=".suraDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.SplashActivity"
+            android:exported="true"
+           >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ui.home.MainActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

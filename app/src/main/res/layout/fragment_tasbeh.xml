@@ -2,13 +2,23 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".04"
+        />
 
 <ImageView
     android:id="@+id/headSebha"
     android:layout_width="wrap_content"
     android:layout_height="0dp"
-    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintHeight_percent=".15"
+    app:layout_constraintTop_toTopOf="@id/guideLine"
     android:src="@drawable/head"
     android:adjustViewBounds="true"
     app:layout_constraintStart_toStartOf="parent"
@@ -17,11 +27,13 @@
     />
     <ImageView
         android:id="@+id/bodySebha"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/headSebha"
         android:src="@drawable/bodysebha"
         android:adjustViewBounds="true"
+        android:layout_marginTop="-26dp"
+        app:layout_constraintWidth_percent=".5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
 
@@ -44,17 +56,16 @@
         android:id="@+id/numOfTasbeh"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="30"
+        android:text="0"
         app:layout_constraintTop_toBottomOf="@id/Tasbeh"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:textSize="25sp"
+        android:textSize="25dp"
         android:background="@drawable/numof_tasbeh"
-        android:paddingHorizontal="15dp"
-        android:paddingVertical="20dp"
-        android:textColor="#242424"
+        android:padding="20dp"
+        android:textColor="@color/count_tasbeha"
         android:layout_marginHorizontal="22dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="25dp"
         />
     <TextView
         android:id="@+id/tv_tasbeh"
@@ -67,7 +78,7 @@
         android:textSize="25sp"
         android:background="@drawable/textoftasbeh"
         android:paddingHorizontal="12dp"
-        android:paddingVertical="16dp"
+        android:paddingVertical="10dp"
         android:textColor="@color/white"
         android:layout_marginHorizontal="22dp"
         android:layout_marginTop="30dp"

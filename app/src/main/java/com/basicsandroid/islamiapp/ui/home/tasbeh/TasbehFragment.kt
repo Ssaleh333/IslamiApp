@@ -28,7 +28,6 @@ class TasbehFragment :Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewBinding.tvTasbeh.setOnClickListener{
-            updatedText()
             updateTasbehCount()
 
         }
@@ -45,6 +44,7 @@ class TasbehFragment :Fragment() {
     private fun updateTasbehCount() {
         tasbehCount++
         viewBinding.numOfTasbeh.text=tasbehCount.toString()
+
         if(tasbehCount==33){
             viewBinding.tvTasbeh.text = updatedText()
             tasbehCount=0
