@@ -10,48 +10,51 @@ import com.basicsandroid.islamiapp.databinding.FragmentTasbehBinding
 import com.basicsandroid.islamiapp.ui.home.TasbehClickListener
 
 class TasbehFragment :Fragment() {
-    private val tasbehOptions = listOf("سبحان الله", "الله أكبر", "لا إله إلا الله", "الحمدلله")
-    private var tasbehIndex = 0
-    private var tasbehCount = 0
-    private var currentTasbehText = tasbehOptions[0]
-
-    lateinit var viewBinding: FragmentTasbehBinding
+   var counter =0
+   lateinit var azkarList: MutableList<String>
+    lateinit var binding: FragmentTasbehBinding
+    var currentZekrIndex=0
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        viewBinding=FragmentTasbehBinding.inflate(inflater,container,false)
-        return viewBinding.root
+        binding=FragmentTasbehBinding.inflate(inflater,container,false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewBinding.tvTasbeh.setOnClickListener{
-            updateTasbehCount()
 
+            azkarList=resources.getStringArray(R.array.azkarList).toMutableList()
+            binding.tvTasbeh.text=azkarList[currentZekrIndex]
+
+            onSebhaClick()
+
+
+
+
+    }
+
+    private fun onSebhaClick() {
+        binding.bodySebha.setOnClickListener {
+            binding.bodySebha.rotation +=(360/33).toFloat()
+
+            if(counter<33){
+                counter ++
+            }else {
+                counter =0
+                currentZekrIndex=if(currentZekrIndex <azkarList.size -1 ) ++currentZekrIndex else 0
+                binding.tvTasbeh.text=azkarList[currentZekrIndex]
+            }
+            binding.numOfTasbeh.text=counter.toString()
+            }
         }
-
-
-    }
-
-    private fun updatedText(): String {
-
-        currentTasbehText = tasbehOptions[tasbehCount % tasbehOptions.size]
-        return currentTasbehText
-    }
-
-    private fun updateTasbehCount() {
-        tasbehCount++
-        viewBinding.numOfTasbeh.text=tasbehCount.toString()
-
-        if(tasbehCount==33){
-            viewBinding.tvTasbeh.text = updatedText()
-            tasbehCount=0
-        }
-
     }
 
 
 
-}
+
+
+
+

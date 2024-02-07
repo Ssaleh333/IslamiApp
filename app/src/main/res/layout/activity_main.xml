@@ -20,6 +20,7 @@
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:text="إسلامي"
+              android:fontFamily="@font/messsiri"
               android:textColor="@color/islami_color"
               android:layout_gravity="center"
               android:textSize="30sp"

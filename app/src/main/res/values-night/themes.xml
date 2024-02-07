@@ -6,5 +6,13 @@
         <item name="android:statusBarColor">#141A2E</item>
 
     </style>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- تحديد الخط المخصص -->
+        <item name="android:itemTextAppearance">@style/CustomMenuItemTextAppearance</item>
+    </style>
+
+    <style name="CustomMenuItemTextAppearance" parent="@android:style/TextAppearance.Widget.IconMenu.Item">
+        <item name="android:fontFamily">@font/messsiri</item>
+    </style>
 
 </resources>
